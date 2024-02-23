@@ -76,7 +76,6 @@ body {
     display: block;
 }
 
-/* Primeira linha: 3 fotos (400x640) */
 .grid-container > :nth-child(6n+1),
 .grid-container > :nth-child(6n+2),
 .grid-container > :nth-child(6n+3) {
@@ -84,17 +83,15 @@ body {
    
 }
 
-/* Segunda linha: 2 fotos (600x640) */
 .grid-container > :nth-child(6n+4),
 .grid-container > :nth-child(6n+5) {
     grid-column: span 3;
-  
+    object-fit: cover;
 }
 
-/* Terceira linha: 1 foto (1200x640) */
 .grid-container > :nth-child(6n+6) {
     grid-column: span 6;
- 
+    background-size:contain;
 }
 
 #registrar{
