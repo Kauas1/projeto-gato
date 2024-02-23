@@ -60,7 +60,7 @@ body {
     padding: 50px;
     gap:5px;
     height: 100%;
-    margin: 80px 120px 80px 120px;
+    margin: 80px 250px 80px 250px;
 }
 
 .grid-item {
@@ -68,6 +68,7 @@ body {
     height: 100%;
     max-height: 640px;
     min-width: 400px;
+    object-fit: cover;
 }
 
 .grid-item img {
@@ -86,12 +87,11 @@ body {
 .grid-container > :nth-child(6n+4),
 .grid-container > :nth-child(6n+5) {
     grid-column: span 3;
-    object-fit: cover;
 }
 
 .grid-container > :nth-child(6n+6) {
     grid-column: span 6;
-    background-size:contain;
+
 }
 
 #registrar{
