@@ -1,57 +1,102 @@
-:root{
+
+  :root {
     --orange-low: #EB6440;
     --white-high: #fff;
     --white-low: #d9d9d9;
     --back: #000;
 }
 
-*{
-    font: bold;
-    font-family: 'Times New Roman', Times, serif;
+* {
+    font-weight: bold;
+    font-family: "Nunito";
 }
 
-body{
+body {
     background-color: var(--white-high);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .navbar{
-    background-color: var(--orange-low);
     display: flex;
-    margin-bottom: 80px;
-    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: var(--orange-low);
 }
 
-.footer{
+.navbar-nav{
+    display: flex;
+    list-style: none;
+}
+
+.nav-item .nav-link{
+    color: var(--orange-400);
+    font-weight: 600px;
+    margin: 0 37.5px 0 0;
+    text-decoration: none;
+    border-right: 200px;
+}
+
+.footer {
     display: flex;
     background-color: var(--orange-low);
     height: 80px;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
 }
 
-.logo{
+.logo {
     transform: rotate(0.5turn);
     width: 73px;
     margin-left: 120px;
 }
 
-.container-gato {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.div-gato{
+.grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 50px;
+    gap:5px;
+    height: 100%;
+    margin: 80px 120px 80px 120px;
 }
 
-.cat {
+.grid-item {
     width: 100%;
     height: 100%;
+    max-height: 640px;
+    min-width: 400px;
 }
 
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Primeira linha: 3 fotos (400x640) */
+.grid-container > :nth-child(6n+1),
+.grid-container > :nth-child(6n+2),
+.grid-container > :nth-child(6n+3) {
+    grid-column: span 2;
+   
+}
+
+/* Segunda linha: 2 fotos (600x640) */
+.grid-container > :nth-child(6n+4),
+.grid-container > :nth-child(6n+5) {
+    grid-column: span 3;
+  
+}
+
+/* Terceira linha: 1 foto (1200x640) */
+.grid-container > :nth-child(6n+6) {
+    grid-column: span 6;
+ 
+}
+
+#registrar{
+    font-weight: bolder;
+}
